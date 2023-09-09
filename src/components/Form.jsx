@@ -8,6 +8,7 @@ const Form = () => {
   const [text, setText] = useState('')
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
+  const [textMssg, setTextMssg] = useState('')
 
     const handleSubmit = (e) => {
       e.preventDefault()
@@ -28,6 +29,12 @@ const Form = () => {
         setError(false)
       }
 
+      if(text.length <= 0){
+        setTextMssg('Please, write down your questions')
+      } else {
+        setTextMssg('')
+      }
+
     }
 
   return (
@@ -38,6 +45,7 @@ const Form = () => {
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" />
         <p>{message}</p>
         <input className='textInput' value={text} onChange={(e) => setText(e.target.value)} type='text' name='text' id='text' placeholder='Send us your questions!' />
+        <p>{textMssg}</p>
         <button>Submit</button>
       </form>
     </div>
