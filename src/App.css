@@ -1,0 +1,85 @@
+#root {
+  margin-top: -18px;
+  padding: 0;
+  text-align: center;
+}
+
+#Dark {
+background-color: black;
+color: rgb(55, 186, 238);
+}
+
+#Dark a {
+  color: rgb(55, 186, 238);
+}
+
+#Dark a:hover{
+  color: white;
+}
+
+#Dark h4{
+  color: white;
+}
+
+#Dark .sb__footer-copyright p{
+  color: rgb(55, 186, 238);
+}
+
+#Dark .sb__footer-below-links p{
+  color: rgb(55, 186, 238);
+}
+
+#Dark .sb__footer-below-links p:hover{
+  color: white;
+}
+
+#Light {
+background-color: white;
+}
+
+#Light a {
+  color: black;
+}
+
+#Light a:hover{
+  color: rgb(55, 186, 238);
+}
+
+#Light .sb__footer-below-links p{
+  color: black;
+}
+
+#Light .sb__footer-below-links p:hover{
+  color: rgb(55, 186, 238);
+}
+
+h1, h2, h3, h4 {
+  color: rgb(55, 186, 238);
+}
+
+.sectionDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.navDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ulStyle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
