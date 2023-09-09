@@ -32,7 +32,9 @@ Manejar dicho comportamiento con el Hook useReducer.
 Sobre la base del tema (claro u oscuro) consumido del contexto global, estilar las cuatro rutas de la app (asignar determinados estilos si es “dark” o “light”).
 
 Pasos a seguir:
+
 Para ayudar a que puedas organizarte y realizar la entrega a tiempo, te dejamos una propuesta de flujo de trabajo. De todas maneras, puedes organizarte de la manera que creas más conveniente para lograr el objetivo buscado.
+
 Paso 1: Creación de rutas 
 Importa los componentes pertinentes para envolver la app y crear el enrutado de la página. No importa que aún no tengamos los componentes que irán en cada vista, por el momento podemos dejar solamente un div.
 Paso 2: Creación de componentes para cada ruta
