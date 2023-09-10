@@ -71,6 +71,21 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 
+.switch {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.switch p {
+  margin-left: 850px;
+}
+
+.react-switch{
+  margin-right: 20px;
+}
+
 .ulStyle {
   display: flex;
   justify-content: space-between;

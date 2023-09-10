@@ -21,8 +21,9 @@ function App() {
 
   return (
       <div className="App" id={contextTheme}>
-        
-          <p>Switch to change mode</p> <ReactSwitch
+          <div className="switch">
+          <p>Switch to change mode</p> 
+          <ReactSwitch
           onChange={handleSwitch}
           checked={checked}
           onColor="#86d3ff"
@@ -36,7 +37,8 @@ function App() {
           width={48}
           className="react-switch"
           id="material-switch" />
-          
+          </div>
+
           <Routes>
             <Route path="/" element={<Navbar />}>
               <Route index element={<Home />} />

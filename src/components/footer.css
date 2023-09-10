@@ -71,6 +71,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 0.2rem;
+    margin-left: 5px;
 }
 
 .sb__footer-below-links{
@@ -99,7 +100,7 @@ hr{
     font-size: 13px;
     line-height: 15px;
     color: black;
-    font-weight: 600;
+    font-weight: 600; 
 }
 
 @media screen and (max-with:850px){

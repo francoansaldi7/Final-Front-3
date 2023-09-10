@@ -1,18 +1,21 @@
 import { useState } from 'react'
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
+  const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
   const [textMssg, setTextMssg] = useState('')
 
     const handleSubmit = (e) => {
+
       e.preventDefault()
+
       const rgExp = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/
+
       if(rgExp.test(email)){
         setMessage('')
       } else if(email === ''){
@@ -35,6 +38,12 @@ const Form = () => {
         setTextMssg('')
       }
 
+      if(error === false && message === ''){
+        setSuccess('Thank you ' + name + '! we will contact you right away')
+      } else {
+        setSuccess('')
+      }
+      
     }
 
   return (
@@ -47,6 +56,7 @@ const Form = () => {
         <input className='textInput' value={text} onChange={(e) => setText(e.target.value)} type='text' name='text' id='text' placeholder='Send us your questions!' />
         <p>{textMssg}</p>
         <button>Submit</button>
+        <p>{success}</p>
       </form>
     </div>
   );
