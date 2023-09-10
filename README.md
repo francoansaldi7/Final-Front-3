@@ -52,3 +52,9 @@ Cada card deberá tener un botón que dispare la acción de guardar, dentro del 
 
 Paso 6: Estilado de componentes clave 
 Basándonos en el theme actual, deberíamos pasar determinada variante de colores a los componentes pertenecientes a las rutas (Home.jsx, Favs.jsx, Detail.jsx, Contact.jsx). No es obligatorio estilar más apartados, pero dicha opción tendrá peso a la hora de determinar la calificación final.
+
+API:
+
+La API a utilizar sera la siguiente: https://jsonplaceholder.typicode.com/users
+
+Y para cada dentista en especifico: https://jsonplaceholder.typicode.com/users/:id
