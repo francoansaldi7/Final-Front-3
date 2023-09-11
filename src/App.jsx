@@ -12,7 +12,7 @@ import './App.css'
 
 function App() {
 
-  const [contextTheme, setContextTheme] = useState(true)
+  const [contextTheme, setContextTheme] = useState('true')
   const [checked, setChecked] = useState(false);
   const handleSwitch = (nextChecked) => {
     setContextTheme( (state) => (state === 'Dark' ? 'Light' : 'Dark'))

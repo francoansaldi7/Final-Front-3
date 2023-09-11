@@ -59,7 +59,7 @@ form{
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 300px;
+  height: 360px;
   margin: 0 auto;
   padding: 10px;
   border: 1px solid rgb(55, 186, 238);
@@ -69,6 +69,17 @@ form{
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+form p {
+  font-size: 80%;
+  color: red;
+  font-weight: 500;
+}
+
+.successMsg {
+  color: rgb(62, 190, 62);
+  font-weight: 500;
 }
 
 input{

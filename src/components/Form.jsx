@@ -39,7 +39,7 @@ const Form = () => {
       }
 
       if(error === false && message === ''){
-        setSuccess('Thank you ' + name + '! we will contact you right away')
+        setSuccess('Thank you ' + name + '! We will contact you right away!')
       } else {
         setSuccess('')
       }
@@ -50,13 +50,13 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input value={name} onChange={(e) => setName(e.target.value)} type="name" name="name" id="name" placeholder="Full Name" />
-        { error ? <label>Your name must have more than 5 characters</label> : ""}
+        { error ? <p>Your name must have more than 5 characters</p> : ""}
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="Email" />
         <p>{message}</p>
         <input className='textInput' value={text} onChange={(e) => setText(e.target.value)} type='text' name='text' id='text' placeholder='Send us your questions!' />
         <p>{textMssg}</p>
         <button>Submit</button>
-        <p>{success}</p>
+        <p className='successMsg'>{success}</p>
       </form>
     </div>
   );
