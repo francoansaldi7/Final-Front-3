@@ -38,7 +38,7 @@ const Form = () => {
         setTextMssg('')
       }
 
-      if(error === false && message === ''){
+      if(error === false && message === '' && textMssg === ''){
         setSuccess('Thank you ' + name + '! We will contact you right away!')
       } else {
         setSuccess('')

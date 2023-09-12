@@ -33,6 +33,10 @@ color: rgb(55, 186, 238);
   color: white;
 }
 
+#Dark .favButton {
+  color: rgb(55, 186, 238);
+}
+
 #Light {
 background-color: white;
 }
@@ -98,4 +102,9 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   margin: 0px 20px;
+}
+
+.contactDiv{
+  border: 1px solid rgb(55, 186, 238);
+  padding: 30px;
 }
