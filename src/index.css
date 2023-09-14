@@ -144,8 +144,19 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: -20px;
-  max-height: fit-content;
-  max-width: fit-content;
+}
+
+.homeSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.homeSection div{
+  width: 85%;
+  margin-left: 100px;
 }
 
 .locationSection {

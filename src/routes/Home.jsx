@@ -5,9 +5,11 @@ import Lottie from "lottie-react"
 const Home = () => {
 
   return (
-    <main className="">
+    <main className="homeSection">
       <h1>Welcome to Franco Ansaldi's Dental Clinic!</h1>
+      <div>
       <Lottie animationData={DentistHome}/>
+      </div>
     </main>
   )
 }
