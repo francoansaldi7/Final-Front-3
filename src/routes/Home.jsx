@@ -1,15 +1,13 @@
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-import Card from "../components/Card"  
+/* eslint-disable react/no-unescaped-entities */
+import DentistHome from "../DentistHome.json"
+import Lottie from "lottie-react"
 
 const Home = () => {
+
   return (
     <main className="">
-      <h1>Here you will find a list of all our Dentists!</h1>
-      <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-        <Card />
-      </div>
+      <h1>Welcome to Franco Ansaldi's Dental Clinic!</h1>
+      <Lottie animationData={DentistHome}/>
     </main>
   )
 }

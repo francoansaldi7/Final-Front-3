@@ -17,7 +17,7 @@ function Footer() {
       <div className="sb__footer-links_div">
         <h4>For Business</h4>
         <Link to="/worktogether"><p>Hire a Team</p></Link>
-        <Link to="/investments"><p>Invest with us</p></Link>
+        <Link to="/donations"><p>Donations</p></Link>
         <Link to="/equipment"><p>Buy equipment</p></Link>
       </div>
 

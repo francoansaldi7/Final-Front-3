@@ -1,14 +1,25 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import ReactSwitch from "react-switch"
-import { Route, Routes } from 'react-router-dom'
 import Home from './routes/Home'
 import Contact from './routes/Contact'
 import Detail from './routes/Detail'
 import Favs from './routes/Favs'
-import './App.css'
-
+import Location from './routes/Location'
+import AboutUs from './routes/AboutUs'
+import Dentists from './routes/Dentists'
+import ProductsAndServices from './routes/ProductsAndServices'
+import Blog from './routes/Blog'
+import Testimonies from './routes/Testimonies'
+import WorkTogether from './routes/WorkTogether'
+import Donation from './routes/Donation'
+import BuyEquipment from './routes/BuyEquipment'
+import TermsAndConditions from './routes/TermsAndConditions'
+import PrivacyPolicy from './routes/PrivacyPolicy'
+import Security from './routes/Security'
+import Cookies from './routes/Cookies'
 
 function App() {
 
@@ -21,42 +32,25 @@ function App() {
 
   return (
       <div className="App" id={contextTheme}>
-          <div className="switch">
-          <p>Switch to change mode</p> 
-          <ReactSwitch
-          onChange={handleSwitch}
-          checked={checked}
-          onColor="#86d3ff"
-          onHandleColor="#2693e6"
-          handleDiameter={30}
-          uncheckedIcon={false}
-          checkedIcon={false}
-          boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-          activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-          height={20}
-          width={48}
-          className="react-switch"
-          id="material-switch" />
-          </div>
-
           <Routes>
-            <Route path="/" element={<Navbar />}>
+            <Route path="/" element={<Navbar handleSwitch={handleSwitch} checked={checked}/>}>
               <Route index element={<Home />} />
+              <Route path='/dentists' element={<Dentists />} />
               <Route path='/favs' element={<Favs />} />
               <Route path='/detail' element={<Detail />} />
               <Route path='/contact' element={<Contact />} />
-              <Route path='/worktogether' element={<Home />} />
-              <Route path='/investments' element={<Home />} />
-              <Route path='/equipment' element={<Home />} />
-              <Route path='/locations' element={<Home />} />
-              <Route path='/blog' element={<Home />} />
-              <Route path='/testimonies' element={<Home />} />
-              <Route path='/about' element={<Home />} />
-              <Route path='/products&services' element={<Home />} />
-              <Route path='/terms' element={<Home />} />
-              <Route path='/privacy' element={<Home />} />
-              <Route path='/security' element={<Home />} />
-              <Route path='/cookie' element={<Home />} />
+              <Route path='/worktogether' element={<WorkTogether />} />
+              <Route path='/donations' element={<Donation />} />
+              <Route path='/equipment' element={<BuyEquipment />} />
+              <Route path='/locations' element={<Location />} />
+              <Route path='/blog' element={<Blog />} />
+              <Route path='/testimonies' element={<Testimonies />} />
+              <Route path='/about' element={<AboutUs />} />
+              <Route path='/products&services' element={<ProductsAndServices />} />
+              <Route path='/terms' element={<TermsAndConditions />} />
+              <Route path='/privacy' element={<PrivacyPolicy />} />
+              <Route path='/security' element={<Security />} />
+              <Route path='/cookie' element={<Cookies />} />
             </Route>
           </Routes>
 
