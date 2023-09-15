@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const Detail = () => {
   const [dentist, setDentist] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const {id} = useParams()
  
+
+  console.log(id)
   const getDentist = async () => {
     try {
-      const result = await fetch('https://jsonplaceholder.typicode.com/users/:id')
+      const result = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       const data = await result.json()
       setDentist(data)
       } catch (error) {

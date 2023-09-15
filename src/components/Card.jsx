@@ -24,7 +24,7 @@ const Card = ({ name, username, id }) => {
  
   return (
     <>
-    <Link to={"/detail"}>
+    <Link to={`/detail/${id}`}>
       <div className="card">
         <h2>{name}</h2>
         <img src="/doctor.jpg" alt="dentist picture" />
