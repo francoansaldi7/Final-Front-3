@@ -1,26 +1,40 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const Card = ({ name, username, id }) => {
-
+  
+  const [favorite, setFavorite] = useState(JSON.parse(localStorage.getItem("favs")) ?.some((card) => card.id === id) || false)
+  
   const addFav = () =>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+    const favs = JSON.parse(localStorage.getItem("favs")) || []
+
+    if(!favs.some((card) => card.id == id)){
+      favs.push({ name, username, id })
+
+    localStorage.setItem("favs", JSON.stringify(favs))
+    setFavorite(true)
+    }else{
+      const newFav = favs.filter((card) => card.id !== id)
+      localStorage.setItem("favs", JSON.stringify(newFav))
+      setFavorite(false)
+    }
   }
  
-
   return (
-    <a href="/detail"><div className="card">
-    <h2>{name}</h2>
-    <img src="/doctor.jpg" alt="dentist picture" />
-    <h3>{username}</h3>
-    <h2>License number: {id}</h2>
-    <button onClick={addFav} className="favButton">Add fav</button>
-    </div></a>
+    <>
+    <Link to={"/detail"}>
+      <div className="card">
+        <h2>{name}</h2>
+        <img src="/doctor.jpg" alt="dentist picture" />
+        <h3>{username}</h3>
+        <h2>License number: {id}</h2>
+        
+        <button onClick={addFav} className="favButton">{favorite ? <p>Remove fav</p> : <p>Add fav</p>}</button>
+      </div></Link>
+      </>
   );
 }
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        
+       
 export default Card;

@@ -1,19 +1,46 @@
+import { useState, useEffect } from 'react'
+
 const Detail = () => {
-    // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-    // https://jsonplaceholder.typicode.com/users/:id
+  const [dentist, setDentist] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+ 
+  const getDentist = async () => {
+    try {
+      const result = await fetch('https://jsonplaceholder.typicode.com/users/:id')
+      const data = await result.json()
+      setDentist(data)
+      } catch (error) {
+      setError("Sorry! an error has occurred, we're trying to fix it")
+      } finally {
+      setLoading(false) 
+      }
+    }
 
+    {error ? error : null}
+    {loading ? <div>Loading Data...</div> : null}
 
+  useEffect(() => {
+    getDentist()
+  }, [])
 
-    return (
-      <section className="detailSection">
-        <div>
-          <h1>Detail Dentist id </h1>
-          {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-          {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+  return (
+    <>
+    <section className='detailSection'>
+      <h1>Dentist Details - License n°: {dentist.id}</h1>
+        <div className='detailCard'>
+          <div className='detailImg'>
+            <img src="/doctor.jpg" alt="dentist picture" />
+          </div>
+          <div>
+            <h2>Name: {dentist.name}</h2>
+            <h2>Email: {dentist.email}</h2>
+            <h2>Phone: {dentist.phone}</h2>
+            <h2>Website: {dentist.website}</h2>
+          </div>
         </div>
-      </section>
-      
-    )
-  }
-  
+    </section>
+    </>
+  )
+}
   export default Detail

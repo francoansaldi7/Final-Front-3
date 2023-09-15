@@ -17,7 +17,7 @@ const Dentists = () => {
         console.log(data)
         setItems(data)
         } catch (error) {
-        setError("Sorry! an error has occured, we're trying to fix it")
+        setError("Sorry! an error has occurred, we're trying to fix it")
         } finally {
         setLoading(false)
         }

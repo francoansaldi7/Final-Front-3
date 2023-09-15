@@ -8,7 +8,9 @@ const Cookies = () => {
     <main className="cookiesSection">
       <h1>We use cookies to provide you a better service!</h1>
       <h2>Please choose your settings and confirm</h2>
+      <div className="cookieAnimation">
       <Lottie animationData={CookiesAnimation}/>
+      </div>
     </main>
   )
 }

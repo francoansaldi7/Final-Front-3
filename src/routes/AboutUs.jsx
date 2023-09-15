@@ -6,7 +6,7 @@ const AboutUs = () => {
 
   return (
     <main className="locationSection">
-      <h1>Franco Ansaldi is a creative student looking to improve his skills</h1>
+      <h1>Franco Ansaldi is a creative student looking to constantly improve his skills</h1>
       <Lottie animationData={AboutUsAnimation}/>
     </main>
   )
