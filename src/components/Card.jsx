@@ -7,7 +7,9 @@ const Card = ({ name, username, id }) => {
   
   const [favorite, setFavorite] = useState(JSON.parse(localStorage.getItem("favs")) ?.some((card) => card.id === id) || false)
   
-  const addFav = () =>{
+  const addFav = (e) =>{
+
+    e.preventDefault()
     const favs = JSON.parse(localStorage.getItem("favs")) || []
 
     if(!favs.some((card) => card.id == id)){
