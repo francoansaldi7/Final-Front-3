@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import DonationAnimation from "../DonationAnimation.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const Donation = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+});
 
   return (
     <main className="donationSection">

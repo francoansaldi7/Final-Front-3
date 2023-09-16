@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import DentistHome from "../DentistHome.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const Home = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <main className="homeSection">

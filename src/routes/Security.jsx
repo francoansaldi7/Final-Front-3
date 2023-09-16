@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import SecurityAnimation from "../SecurityAnimation.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const Security = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <main className="securitySection">

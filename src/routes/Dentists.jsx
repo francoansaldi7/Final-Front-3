@@ -1,10 +1,14 @@
-import { useState, useEffect} from "react"
+import { useState, useEffect, useLayoutEffect} from "react"
 import Card from '../components/Card'
 
 const Dentists = () => {
     const [items, setItems] = useState()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+
+    useLayoutEffect(() => {
+      window.scrollTo(0, 0)
+    });
 
     useEffect(() => {
       getData() 

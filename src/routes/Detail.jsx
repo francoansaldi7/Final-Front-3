@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 const Detail = () => {
@@ -7,6 +7,9 @@ const Detail = () => {
   const [error, setError] = useState(null)
   const {id} = useParams()
  
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   console.log(id)
   const getDentist = async () => {

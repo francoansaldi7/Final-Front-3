@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import PrivacyAnimation from "../PrivacyAnimation.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const PrivacyPolicy = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <main className="privacySection">

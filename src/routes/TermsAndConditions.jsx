@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import TermsAnimation from "../TermsAnimation.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const TermsAndConditions = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <main className="termsSection">

@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import ServicesAnimation from "../ServicesAnimation.json"
+import { useLayoutEffect } from "react";
 import Lottie from "lottie-react"
 
 const ProductsAndServices = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
 
   return (
     <main className="serviceSection">

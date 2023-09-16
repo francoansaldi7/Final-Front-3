@@ -1,6 +1,12 @@
 import Card from "../components/Card"
+import { useLayoutEffect } from "react";
 
 const Favs = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   const favoriteCards = JSON.parse(localStorage.getItem("favs"));
 
     return (

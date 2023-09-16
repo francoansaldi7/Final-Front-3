@@ -1,6 +1,12 @@
 import Form from '../Components/Form'
+import { useLayoutEffect } from 'react';
 
 const Contact = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   return (
     <div className='contactDiv'>
       <h2>Want to know more?</h2>
